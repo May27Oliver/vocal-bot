@@ -47,11 +47,9 @@ def handle_message(event):
     text = event.message.text
     print(text)
     if text == 'Hi':
-        reply_text = "嗨~Sumi，今天過的好嗎？"
+        reply_text = "嗨~，今天過的好嗎？"
     elif text == '妳好':
-        reply_text = 'Sumi逆豪，汪汪！'
-    elif text == '我愛你':
-        reply_text = '我也愛妳！'
+        reply_text = '逆豪，汪汪！'
     else:
         reply_text = '汪！'
     
