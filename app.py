@@ -28,7 +28,7 @@ def callback():
 
     # get request body as text
     body = request.get_data(as_text=True)
-    app.logger.info("Request body: " + body)
+    app.logger.info("Request body: " + body,"Signature:"+signature)
 
     # handle webhook body
     try:
@@ -45,7 +45,7 @@ def callback():
 def handle_message(event):
     # TextSendMessage(text=event.message.text))
     text = event.message.text
-
+    print(text)
     if text == 'Hi' or text == 'hi':
         reply_text = "嗨~Sumi，今天過的好嗎？"
     elif text == '妳好' or text == '你好':
