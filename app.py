@@ -43,22 +43,22 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=event.message.text)
-    )
-    # TextSendMessage(text=event.message.text))
-    # text = event.message.text
-    # print(text)
-    # if text == 'Hi':
-    #     reply_text = "嗨~，今天過的好嗎？"
-    # elif text == '妳好':
-    #     reply_text = '逆豪，汪汪！'
-    # else:
-    #     reply_text = '汪！'
+    # line_bot_api.reply_message(
+    #     event.reply_token,
+    #     TextSendMessage(text=event.message.text)
+    # )
+    TextSendMessage(text=event.message.text))
+    text = event.message.text
+    print(text)
+    if text == 'Hi':
+        reply_text = "嗨~，今天過的好嗎？"
+    elif text == '妳好':
+        reply_text = '逆豪，汪汪！'
+    else:
+        reply_text = '汪！'
     
-    # message = TextSendMessage(reply_text)
-    # line_bot_api.reply_message(event.reply_token, message)
+    message = TextSendMessage(reply_text)
+    line_bot_api.reply_message(event.reply_token, message)
 
 if __name__ == "__main__":
     app.run()
