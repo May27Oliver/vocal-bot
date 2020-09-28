@@ -47,7 +47,7 @@ def handle_message(event):
     #     event.reply_token,
     #     TextSendMessage(text=event.message.text)
     # )
-    TextSendMessage(text=event.message.text))
+    # TextSendMessage(text=event.message.text))
     text = event.message.text
     print(text)
     if text == 'Hi':
@@ -55,7 +55,7 @@ def handle_message(event):
     elif text == '妳好':
         reply_text = '逆豪，汪汪！'
     else:
-        reply_text = '汪！'
+        reply_text = 'Sumi晚安～祝妳有個好夢和愉快的中秋假期！'
     
     message = TextSendMessage(reply_text)
     line_bot_api.reply_message(event.reply_token, message)
