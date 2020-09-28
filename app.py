@@ -12,7 +12,7 @@ from linebot.models import (
 
 app = Flask(__name__)
 
-line_bot_api = LineBotApi("kqZ3q9+hPrWwCRqVSdDLA98fBAYgrVO0mvfHKsqVTeYtKaLpRs9QGc1jVdNWa6jXKQlli5cwQREXrRr8Eq20MPB4ChUNI7Q8ARrLx7tf+w5t9bK2/TIrc7zrUSX+k01RE9gWRvowFSDTm26NYECHKQdB04t89/1O/w1cDnyilFU=")
+line_bot_api = LineBotApi("s67yrhHES8BpqIT1NiZw97eZxomG6ykDO8KAE4NE7iKykxd73utCJTM7L1BGDyZeKQlli5cwQREXrRr8Eq20MPB4ChUNI7Q8ARrLx7tf+w5850BVpsZvKZL7dxmpX8CFgCxHFRdFI7lGNwB56XCKjAdB04t89/1O/w1cDnyilFU=")
 handler = WebhookHandler("9e32837ba7d824102992394dfeffda37")
 
 
@@ -28,7 +28,7 @@ def callback():
 
     # get request body as text
     body = request.get_data(as_text=True)
-    app.logger.info("Request body: " + body,"Signature:"+signature)
+    app.logger.info("Request body: " + body)
 
     # handle webhook body
     try:
