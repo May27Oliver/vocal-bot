@@ -50,14 +50,14 @@ def handle_message(event):
     # TextSendMessage(text=event.message.text))
     text = event.message.text
     print(text)
-    if text == 'Hi':
-        reply_text = "汪！今天過的好嗎？"
-    elif text == '妳好':
+    if text == 'Hi' or text == 'hi':
+        reply_text = "嗨！今天過的好嗎？"
+    elif text == '你好' or text == '妳好':
         reply_text = '逆豪，汪汪！'
-    elif text == "我愛你" or text == "I love you":
-        reply_text = "汪！真的嗎？我也超級超級喜歡妳！"
+    elif text == "我愛你" or text == "I love you.":
+        reply_text = "真的嗎？我也超級超級喜歡你/妳！"
     else:
-        reply_text = '汪汪！Sumi早安～今天也繼續加油唷！離放假只剩兩天！'
+        reply_text = '嗨嗨～離放假只剩一哩路！'
     
     message = TextSendMessage(reply_text)
     line_bot_api.reply_message(event.reply_token, message)
